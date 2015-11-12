@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/timer_layout"
+    android:padding="20dp"
+     >
+
+    <TextView
+        android:id="@+id/chronometerTimer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:textSize="80sp"
+	/>
+    <TextView
+        android:id="@+id/textViewTimerTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:textSize="60sp"/>
+
+    <ToggleButton
+        android:id="@+id/toggleButtonPauseResume"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:textOn="@string/resume"
+        android:textOff="@string/pause" 
+        android:background="@drawable/pause_resume_toggle"
+        android:textColor="@color/white"
+        />
+
+
+
+</RelativeLayout>

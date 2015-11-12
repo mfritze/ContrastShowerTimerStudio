@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+     >
+    
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+        android:layout_alignParentTop="true"
+        android:layout_above="@+id/buttonStartTimer"
+        >
+        
+        <RelativeLayout 
+        	android:layout_width="match_parent"
+        	android:layout_height="wrap_content"
+        	>
+        	
+			<TextView
+			    android:id="@+id/textViewCyclesCount"
+			    android:layout_width="match_parent"
+			    android:layout_height="wrap_content"
+			    android:layout_alignParentLeft="true"
+			    android:layout_alignParentTop="true"
+			    android:text="@string/how_many_cycles"
+			     />
+			
+			<View 
+			    android:id="@+id/cyclesBar"
+			    android:layout_height="2dp"
+			    android:layout_width="match_parent"
+			    android:background="@color/grey"
+			    android:layout_below="@+id/textViewCyclesCount"
+			    android:layout_marginBottom="2dp"
+			    
+			    />
+			
+			<NumberPicker
+			    android:id="@+id/numberPickerCycles"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:layout_alignLeft="@+id/textViewCyclesCount"
+			    android:layout_below="@+id/cyclesBar"
+			    android:layout_marginLeft="10dp"
+			     />
+		
+		
+			<TextView
+			    android:id="@+id/textViewCycleDuration"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:layout_alignParentLeft="true"
+			    android:layout_below="@+id/numberPickerCycles"
+			    android:text="@string/how_long"
+				 />
+			
+			<View 
+			    android:id="@+id/durationBar"
+			    android:layout_height="2dp"
+			    android:layout_width="match_parent"
+			    android:background="@color/grey"
+			    android:layout_below="@+id/textViewCycleDuration"
+			    android:layout_marginBottom="2dp"
+			    />
+		
+			<NumberPicker
+			    android:id="@+id/numberPickerMinutes"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:layout_alignLeft="@+id/numberPickerCycles"
+			    android:layout_below="@+id/durationBar" />
+		
+			<NumberPicker
+			    android:id="@+id/numberPickerSecondsOrder"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:layout_alignTop="@+id/numberPickerMinutes"
+			    android:layout_toRightOf="@+id/textViewMin" >
+			</NumberPicker>
+		
+			<TextView
+			    android:id="@+id/textViewMin"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:layout_alignBottom="@+id/numberPickerMinutes"
+			    android:layout_alignTop="@+id/numberPickerMinutes"
+			    android:layout_toRightOf="@+id/numberPickerMinutes"
+			    android:gravity="center_vertical"
+			    android:text="@string/min" />
+		
+			<NumberPicker
+			    android:id="@+id/numberPickerSeconds"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:layout_alignTop="@+id/numberPickerSecondsOrder"
+			    android:layout_toRightOf="@+id/numberPickerSecondsOrder" />
+			
+			<TextView
+			    android:id="@+id/textViewSec"
+			    android:layout_height="wrap_content"
+			    android:layout_width="wrap_content"
+			    android:text="@string/sec"
+			    android:layout_alignTop="@+id/numberPickerSeconds"
+			    android:layout_alignBottom="@+id/numberPickerSeconds"
+			    android:gravity="center_vertical"
+			    android:layout_toRightOf="@+id/numberPickerSeconds"
+			     />
+			
+		
+			<View 
+			    android:id="@+id/startBar"
+			    android:layout_height="2dp"
+			    android:layout_width="match_parent"
+			    android:background="@color/grey"
+			    android:layout_below="@+id/numberPickerMinutes"
+			    android:layout_marginBottom="2dp"
+			    />
+			
+			<TextView 
+			    android:id="@+id/textViewStartTemp"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:layout_below="@+id/startBar"
+			    android:layout_alignParentLeft="true"
+			    android:text="@string/start_cycle"
+			    />
+				
+			<ToggleButton
+			    android:id="@+id/toggleButtonStartCycle"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:layout_alignParentLeft="true"
+			    android:layout_below="@+id/textViewStartTemp"
+			    android:background="@drawable/hot_cold_toggle"
+			    android:textOff=""
+			    android:textOn="" />
+			
+			<TextView 
+			    android:id="@+id/textViewEndTemp"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:layout_below="@+id/startBar"
+			    android:layout_alignLeft="@+id/numberPickerSecondsOrder"
+			    android:text="@string/end_cycle"
+			    />
+		
+			<ToggleButton
+			    android:id="@+id/toggleButtonEndCycle"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:layout_alignLeft="@+id/numberPickerSecondsOrder"
+			    android:layout_alignTop="@+id/toggleButtonStartCycle"
+			    android:layout_toRightOf="@+id/numberPickerSeconds"
+			    android:background="@drawable/hot_cold_toggle"
+			    android:textOff=""
+			    android:textOn="" />
+			
+			<View
+			    android:id="@+id/centerHorizontalLine"
+			    android:layout_centerHorizontal="true"
+			    android:layout_height="0dp"
+			    android:layout_width="0dp"
+			    />
+            
+        </RelativeLayout>
+        
+        
+    </ScrollView>
+
+	
+	
+	<Button
+	    android:id="@+id/buttonStartTimer"
+	    android:layout_width="100dp"
+	    android:layout_height="100dp"
+	    android:layout_alignParentBottom="true"
+	    android:layout_centerHorizontal="true"
+	    android:textColor="@color/white"
+	    android:background="@drawable/green_button"
+	    android:text="@string/start" />
+
+
+
+</RelativeLayout>
